@@ -25,15 +25,15 @@
 	{Hangzhou} % Empty location
 	{May. 2022 - Jun. 2023} % Empty date
 	{
-		The purpose of the project is to cluster similar medical records based on the annual, real, and all medical diagnosis records in Zhejiang Province, and to control doctors' diagnostic behavior by paying the same price for each type of similar medical records through medical insurance, so as to avoid unnecessary excessive medical behavior. \newline
-		Algorithmically speaking, the essence of the project is a large-scale clustering algorithm based on real-world data. It involves data cleaning, FP growth frequent pattern mining algorithm, minibatch Kmeans clustering algorithm, distributed computing, the use of slurm cluster, etc. I'm responsible for almost all code parts in the project, but does not involve resource scheduling, cluster construction, etc. \newline
-		The main highlights are: \newline
+		The objective of the project is to cluster similar medical records based on the complete annual diagnosis records in Zhejiang Province and regulate doctors' diagnostic behavior by paying the same price for each type of similar medical record through medical insurance, avoiding unnecessary excessive medical behavior. \newline
+		From an algorithmic perspective, the essence of the project is a large-scale clustering algorithm based on real-world data. It encompasses various stages such as data cleaning, the FP-growth frequent pattern mining algorithm, the minibatch Kmeans clustering algorithm, distributed computing, and the utilization of a Slurm cluster. I am primarily responsible for developing the code components of the project, excluding tasks related to resource scheduling and cluster construction. \newline
+		The main highlights of the project include: \newline
 		\vspace{3.5mm}
 		\begin{cvitems} % Description(s) bullet points
-			\item{Utilize the unique nature of the data, classify according to the disease type, and greatly reduce the amount of data processed in a single time, so that clustering can be carried out.}
-			\item{In the prediction stage, the operation of traversing the FP tree is converted into a problem of solving similarity using matrix multiplication, so that the code becomes cache-memory friendly and can be accelerated by using the matrix operation library.}
+			\item{Leveraging the unique characteristics of the data to classify it based on disease types, thereby significantly reducing the amount of data processed in a single time and enabling efficient clustering.}
 			\item{In the training phase, a simple cache calculation result technology is used, which greatly reduces the time for debugging the algorithm and makes it possible to try different ideas and technical details.}
-			\item {Under the combined effects of 2 and 3, the algorithm iteration cycle for training and forecasting has been reduced from using only one-fifth of the city's data, five machines running for 30 days to the city's data, and one machine only needs to run In about three days, a speedup of about 250 times was obtained}
+			\item{Transforming the process of traversing the FP-tree in the prediction stage into a matrix multiplication-based similarity problem. This optimization makes the code memory friendly and enables acceleration through the utilization of matrix operation libraries.}
+			\item {Through the combined effects of the second and third highlights, the algorithm's iteration cycle for training and forecasting has been dramatically reduced. Previously, the process necessitated the utilization of five machines running continuously for 30 days to handle merely one-fifth of the city's data. However, with the advancements made, the same task can now be completed using only one machine within approximately three days, encompassing the entirety of the city's dataset. This improvement yields a speedup of approximately 250 times.}
 		\end{cvitems}
 	}
 
