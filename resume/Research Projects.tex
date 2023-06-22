@@ -1,0 +1,32 @@
+\cvsection{Research Projects}
+
+\begin{cventries}
+
+	\cventry
+	{} % Empty position
+	{Research on Cervical Lesion Cell Detection} % Project
+	{Hangzhou} % Empty location
+	{Oct. 2020 - Mar. 2022} % Empty date
+	{
+		Automatic detection of cervical lesion cells or cell clumps using cervical cytology images is critical for efﬁcient cervical cancer screening. I have studied this project through three aspects: (1) The large appearance variances between single cell and cell clumps of the same lesion type pose difﬁculties for accurate lesion cell recognition. (2) Normal cells can be a good reference for abnormal cell recognition. (3) The visual similarity problem among certain abnormal cells, especially those in adjacent differentiated stages. For the above issues, I have studied a novel task decomposing and cell comparing framework for cervical lesion cell detection. The task decomposing scheme decomposes the original detection task into two detection subtasks, which encourages the network to focus on specific cell structures. The cell comparing scheme imitates clinicians to utilize normal cells as reference and compare different types of abnormal cells, and it allows the model to learn more effective and useful lesion cell features.
+	}
+
+	\cventry
+	{} % Empty position
+	{Research on Zhejiang Health Insurance Payment Reform} % Project
+	{Hangzhou} % Empty location
+	{May. 2022 - Jun. 2023} % Empty date
+	{
+		The purpose of the project is to cluster similar medical records based on the annual, real, and all medical diagnosis records in Zhejiang Province, and to control doctors' diagnostic behavior by paying the same price for each type of similar medical records through medical insurance, so as to avoid unnecessary excessive medical behavior. \newline
+		Algorithmically speaking, the essence of the project is a large-scale clustering algorithm based on real-world data. It involves data cleaning, FP growth frequent pattern mining algorithm, minibatch Kmeans clustering algorithm, distributed computing, the use of slurm cluster, etc. I'm responsible for almost all code parts in the project, but does not involve resource scheduling, cluster construction, etc. \newline
+		The main highlights are: \newline
+		\vspace{3.5mm}
+		\begin{cvitems} % Description(s) bullet points
+			\item{Utilize the unique nature of the data, classify according to the disease type, and greatly reduce the amount of data processed in a single time, so that clustering can be carried out.}
+			\item{In the prediction stage, the operation of traversing the FP tree is converted into a problem of solving similarity using matrix multiplication, so that the code becomes cache-memory friendly and can be accelerated by using the matrix operation library.}
+			\item{In the training phase, a simple cache calculation result technology is used, which greatly reduces the time for debugging the algorithm and makes it possible to try different ideas and technical details.}
+			\item {Under the combined effects of 2 and 3, the algorithm iteration cycle for training and forecasting has been reduced from using only one-fifth of the city's data, five machines running for 30 days to the city's data, and one machine only needs to run In about three days, a speedup of about 250 times was obtained}
+		\end{cvitems}
+	}
+
+\end{cventries}
